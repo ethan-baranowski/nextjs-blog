@@ -1,6 +1,7 @@
 // @ts-check
 const { fontFamily } = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
+const { Silkscreen } = require('next/font/google')
 
 /** @type {import("tailwindcss/types").Config } */
 module.exports = {
@@ -22,10 +23,12 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['var(--font-space-grotesk)', ...fontFamily.sans],
+        Silkscreen: ['var(--font-silkscreen)', 'sans-serif'],
+        
+
       },
       colors: {
-        primary: colors.pink,
+        primary: colors.green,
         gray: colors.gray,
       },
       typography: ({ theme }) => ({

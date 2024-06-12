@@ -7,20 +7,43 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Active Directory Mock Environments',
+    description: `Design and implement a basic Active Directory (AD) configuration that simulates an enterprise environment. 
+    Demonstrate, test, and train on various AD functionalities.`,
+    imgSrc: '/static/images/ad.png',
+    href: '',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'Western Digital - VICE SSD Validation',
+    description: `Responsive web-application for Western Digital Corporation, facilitating firmware
+    testing and validation on various operating systems using Angular, Typescript, NodeJS, and Azure.`,
+    imgSrc: '/static/images/WDC.png',
+    href: 'https://ceias.nau.edu/capstone/projects/CS/2022/ViceGrips/index.html',
+  },
+  {
+    title: 'Forensics Malware Analysis',
+    description: ``,
+    imgSrc: '',
+    href: '',
+  },
+  
+  {
+    title: 'OS Simulator',
+    description: ``,
+    imgSrc: '',
+    href: '',
+  },
+  {
+    title: 'Neve Portfolio',
+    description: ``,
+    imgSrc: '',
+    href: '',
+  },
+  {
+    title: 'Local Knowledge Base',
+    description: ``,
+    imgSrc: '',
+    href: '',
   },
 ]
 

@@ -1,0 +1,71 @@
+"use client";
+import siteMetadata from '@/data/siteMetadata'
+import headerNavLinks from '@/data/headerNavLinks'
+import Link from './Link'
+import MobileNav from './MobileNav'
+import ThemeSwitch from './ThemeSwitch'
+import SearchButton from './SearchButton'
+
+import { useState, useEffect } from 'react';
+
+// Define an array of colors to alternate
+const colors = ['#ff0000', '#00ff00', '#0000ff']; // Add more colors as needed
+
+// Function to get the next color in the array
+const getNextColor = (currentColor: string) => {
+  const currentIndex = colors.indexOf(currentColor);
+  const nextIndex = (currentIndex + 1) % colors.length;
+  return colors[nextIndex];
+};
+
+const Header = () => {
+  // State to hold the current color
+  const [currentColor, setCurrentColor] = useState(colors[0]);
+
+  // Effect to change the color every second
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentColor(getNextColor);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <header className="flex items-center justify-between py-10">
+      <div>
+        <Link href="/" aria-label={siteMetadata.headerTitle}>
+          <div className="flex items-center justify-between">
+            <div className="mr-3">
+            </div>
+            {typeof siteMetadata.headerTitle === 'string' ? (
+              <div className="hidden h-6 text-2xl font-semibold sm:block" style={{ color: currentColor }}>
+                {siteMetadata.headerTitle}
+              </div>
+            ) : (
+              siteMetadata.headerTitle
+            )}
+          </div>
+        </Link>
+      </div>
+      <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
+        {headerNavLinks
+          .filter((link) => link.href !== '/')
+          .map((link) => (
+            <Link
+              key={link.title}
+              href={link.href}
+              className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
+            >
+              {link.title}
+            </Link>
+          ))}
+        <SearchButton />
+        <ThemeSwitch />
+        <MobileNav />
+      </div>
+    </header>
+  )
+}
+
+export default Header;
