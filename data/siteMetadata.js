@@ -6,7 +6,7 @@ const siteMetadata = {
   description: 'A blog that currently has no purpose :3',
   language: 'en-us',
   theme: 'dark', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
+  siteUrl: 'https://ethanbaranowski.com',
   siteRepo: '',
   siteLogo: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
