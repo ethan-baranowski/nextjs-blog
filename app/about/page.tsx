@@ -6,7 +6,6 @@ import { genPageMetadata } from 'app/seo'
 // Example for Next.js Image component
 import Image from 'next/image'
 
-
 export const metadata = genPageMetadata({ title: 'About' })
 
 export default function Page() {
