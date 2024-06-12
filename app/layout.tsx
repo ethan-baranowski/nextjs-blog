@@ -15,7 +15,7 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 
 const silk_screen = Silkscreen({
-  weight: ['400','700'],
+  weight: ['400', '700'],
   variable: '--font-silkscreen',
   subsets: ['latin'],
   display: 'swap',

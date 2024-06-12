@@ -1,70 +1,72 @@
 /* customStyles.css */
 
 @keyframes gradientBackground {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
   }
-  
-  @keyframes flashText {
-    0%,
-    100% {
-      color: #ff0000;
-    }
-    50% {
-      color: #0000ff;
-    }
+  50% {
+    background-position: 100% 50%;
   }
-  
-  @keyframes colorChange {
-    0% {
-      color: #ff0000;
-    }
-    25% {
-      color: #00ff00;
-    }
-    50% {
-      color: #0000ff;
-    }
-    75% {
-      color: #ff00ff;
-    }
-    100% {
-      color: #ff0000;
-    }
+  100% {
+    background-position: 0% 50%;
   }
-  
-  @keyframes scaleUpDown {
-    0%, 100% {
-      transform: scale(.90);
-    }
-    50% {
-      transform: scale(.75);
-    }
+}
+
+@keyframes flashText {
+  0%,
+  100% {
+    color: #ff0000;
   }
-  
-  .gradient-text {
-    background: linear-gradient(270deg, #ffffff, #22c55e, #22c55e);
-    background-size: 500% 500%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientBackground 5s ease infinite;
+  50% {
+    color: #0000ff;
   }
-  
-  .flashing-text {
-    animation: flashText 1s linear infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    color: #ff0000;
   }
-  
-  .letter-animation {
-    display: inline-block;
-    animation: colorChange 2s linear infinite, scaleUpDown 1.5s ease-in-out infinite;
-    padding: 0 0px; /* Add padding to prevent cut-off */
-    overflow: visable; /* Ensure overflow is visible */
+  25% {
+    color: #00ff00;
   }
-  
+  50% {
+    color: #0000ff;
+  }
+  75% {
+    color: #ff00ff;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+
+@keyframes scaleUpDown {
+  0%,
+  100% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(0.75);
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(270deg, #ffffff, #22c55e, #22c55e);
+  background-size: 500% 500%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientBackground 5s ease infinite;
+}
+
+.flashing-text {
+  animation: flashText 1s linear infinite;
+}
+
+.letter-animation {
+  display: inline-block;
+  animation:
+    colorChange 2s linear infinite,
+    scaleUpDown 1.5s ease-in-out infinite;
+  padding: 0 0px; /* Add padding to prevent cut-off */
+  overflow: visable; /* Ensure overflow is visible */
+}

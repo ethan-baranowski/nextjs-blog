@@ -1,14 +1,14 @@
-"use client";
+'use client'
 
-import siteMetadata from '@/data/siteMetadata';
-import headerNavLinks from '@/data/headerNavLinks';
-import Link from './Link';
-import MobileNav from './MobileNav';
-import ThemeSwitch from './ThemeSwitch';
-import SearchButton from './SearchButton';
+import siteMetadata from '@/data/siteMetadata'
+import headerNavLinks from '@/data/headerNavLinks'
+import Link from './Link'
+import MobileNav from './MobileNav'
+import ThemeSwitch from './ThemeSwitch'
+import SearchButton from './SearchButton'
 
 // Import the CSS file for custom animations
-import '@/css/customStyles.css';
+import '@/css/customStyles.css'
 
 // Function to wrap each letter in a span with a class for animation
 const animateHeaderTitle = (title: string) => {
@@ -16,8 +16,8 @@ const animateHeaderTitle = (title: string) => {
     <span key={index} className="letter-animation">
       {letter}
     </span>
-  ));
-};
+  ))
+}
 
 const Header = () => {
   return (
@@ -25,11 +25,9 @@ const Header = () => {
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
-            <div className="mr-3">
-              {/* Logo or any additional element */}
-            </div>
+            <div className="mr-3">{/* Logo or any additional element */}</div>
             {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="hidden h-6 text-2xl font-semibold sm:block gradient-text">
+              <div className="gradient-text hidden h-6 text-2xl font-semibold sm:block">
                 {animateHeaderTitle(siteMetadata.headerTitle)}
               </div>
             ) : (
@@ -55,7 +53,7 @@ const Header = () => {
         <MobileNav />
       </div>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header

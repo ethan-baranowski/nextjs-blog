@@ -24,8 +24,6 @@ module.exports = {
       },
       fontFamily: {
         Silkscreen: ['var(--font-silkscreen)', 'sans-serif'],
-        
-
       },
       colors: {
         primary: colors.green,
