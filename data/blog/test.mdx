@@ -1,15 +1,14 @@
 ---
-title: Images in Next.js
-date: '2020-11-11'
-tags: ['next js', 'guide']
+title: Test with Images and Code
+date: '2024-06-11'
+tags: ['test', 'temp']
 draft: false
 summary: 'In this article we introduce adding images in the tailwind starter blog and the benefits and limitations of the next/image component.'
-authors: ['sparrowhawk']
 ---
 
 # Introduction
 
-The tailwind starter blog has out of the box support for [Next.js's built-in image component](https://nextjs.org/docs/api-reference/next/image) and automatically swaps out default image tags in markdown or mdx documents to use the Image component provided.
+this is just a test with a md template ..
 
 # Usage
 
@@ -31,12 +30,8 @@ function Home() {
 export default Home
 ```
 
-For a markdown file, the default image tag can be used and the default `img` tag gets replaced by the `Image` component in the build process.
-
-Assuming we have a file called `ocean.jpg` in `static/images/ocean.jpg`, the following line of code would generate the optimized image.
-
 ```
-![ocean](/static/images/ocean.jpg)
+![ocean](/static/images/google.png)
 ```
 
 Alternatively, since we are using mdx, we can just use the image component directly! Note, that you would have to provide a fixed width and height. The `img` tag method parses the dimension automatically.
@@ -47,7 +42,7 @@ Alternatively, since we are using mdx, we can just use the image component direc
 
 _Note_: If you try to save the image, it is in webp format, if your browser supports it!
 
-![ocean](/static/images/ocean.jpeg)
+![ocean](/static/images/google.png)
 
 Photo by [YUCAR FotoGrafik](https://unsplash.com/@yucar?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 on [Unsplash](https://unsplash.com/s/photos/sea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

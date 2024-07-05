@@ -22,26 +22,26 @@ const projectsData: Project[] = [
   },
   {
     title: 'Forensics Malware Analysis',
-    description: ``,
+    description: `Description Coming Soon ...`,
     imgSrc: '',
     href: '',
   },
 
   {
     title: 'OS Simulator',
-    description: ``,
+    description: `Operating System simulator project demonstrating scheudling algorithms such as FCFS, RR, SJF, and SRTF.`,
     imgSrc: '',
-    href: '',
+    href: '/blog/OSSIM',
   },
   {
     title: 'Neve Portfolio',
-    description: ``,
+    description: `Description Coming Soon ...`,
     imgSrc: '',
     href: '',
   },
   {
     title: 'Local Knowledge Base',
-    description: ``,
+    description: `Description Coming Soon ...`,
     imgSrc: '',
     href: '',
   },

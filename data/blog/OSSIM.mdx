@@ -1,0 +1,82 @@
+---
+title: Operating System Simulator
+date: '2024-07-06'
+tags: ['projects', 'os-sim', 'c-programming']
+draft: false
+summary: OS Simulator project for CS480 Course
+---
+
+> [!CAUTION]
+> Due to University Guidlines, I am unable to make this repository public.
+
+# Introduction
+
+This project was a command line tool, designed to simulate the operations of an operating system. Developed in four progressive stages, from Sim01 to Sim04, each phase builds on the previous to introduce more complex functionalities and features. The primary focus of the project is to simulate various scheduling strategies and manage a varying number of processes.
+
+## Overview
+
+### Sim01: Basic Simulation
+
+- Introduces the fundamental structure of the simulator.
+- Handles basic command line arguments and simple configuration files.
+- Simulates basic process scheduling.
+
+### Sim02: Enhanced Scheduling
+
+- Introduces more complex scheduling strategies.
+- Handles multiple processes with different priorities and resource requirements.
+- Uses enhanced configuration and metadata files.
+
+### Sim03: Advanced Features
+
+- Implements advanced OS features such as I/O management and multi-threading.
+- Incorporates more detailed configuration settings to simulate real-world OS scenarios.
+- Enhances the command line interface for better user interaction.
+
+### Sim04: Full OS Simulation
+
+- Combines all previous features into a fully functional OS simulator.
+- Optimizes performance and adds comprehensive logging and debugging features.
+- Supports dynamic process management and complex scheduling algorithms.
+
+## Complexity and Moving Parts
+
+The OS Simulator project involves numerous components working together to create a functional simulation of an operating system. Here's a breakdown of the key files and their purposes:
+
+- `OS_SimDriver.c/h`: Main driver code for the simulator, coordinating the overall operations.
+- `StandardConstants.h`: Defines constants used throughout the code for consistency.
+- `StringUtils.c/h`: Contains utility functions for string manipulation and processing.
+- `config0.cnf, config3.cnf`: Configuration files specifying simulation parameters and settings.
+- `metadata1.mdf, metadata3.mdf`: Metadata files containing information about processes and resources.
+- `configops.c/h`: Manages operations related to reading and processing configuration files.
+- `metadataops.c/h`: Handles operations related to parsing and utilizing metadata.
+- `simtimer.c/h`: Implements timing functionalities for simulating process timing and scheduling.
+- `simulator.c/h`: Contains the core simulation logic, managing process scheduling and resource allocation.
+
+## Run
+
+Here is what the user is met with and the options available :
+
+```c
+/*
+Name: showProgramFormat
+Process: Displays command line argument requirements
+Function Input/Parameters: none
+Function Output/Parameters: none
+Function Output/Returned: none
+Device Input/Keyboard: none
+Device Output/Monitor: instructions provided as specified
+Dependencies: none
+ */
+void showProgramFormat()
+{
+  // print out command line argument instructions
+    // function: printf
+  printf("Program Format:\n");
+  printf("     sim_0x [-dc] [-dm] [-rs] <config file name>\n");
+  printf("     -dc [optional] displays configuration data\n");
+  printf("     -dm [optional] displays meta data\n");
+  printf("     -rs [optional] runs simulator\n");
+  printf("     config file name  is required\n");
+}
+```

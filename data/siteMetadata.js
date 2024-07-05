@@ -3,7 +3,8 @@ const siteMetadata = {
   title: 'EB',
   author: 'Ethan Baranowski',
   headerTitle: '< EB >',
-  description: 'A blog that currently has no purpose :3',
+  description:
+    'Here I share insights on various tech-related topics, and showcase my personal projects. Thanks for stopping by :) ',
   language: 'en-us',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://ethanbaranowski.com',
